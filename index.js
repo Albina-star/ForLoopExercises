@@ -49,10 +49,28 @@ for (let i = name.length - 1; i >=0; i--){
 /*Exercise #3:Construct a for loop that sorts the array [2, 3, 13, 18, -5, 38, -10, 11, 0, 104] into two new arrays:
   a. One array contains the even numbers, and the other holds the odds.
   b. Print the arrays to confirm the results. */
+
+ 
+  const evens = [];
+  const odds = [];
+
   const array = [2, 3, 13, 18, -5, 38, -10, 11, 0, 104];
-  for (const oddNumbers of array) {
-    if (oddNumbers % 2===1)
-    console.log(oddNumbers);
+
+  for (let i = 0; i < array.length; i++) {
+    const number = array[i];
+
+    if (number % 2 === 0){
+    evens.push(number);
+  } else {
+    odds.push (number);
+  }
+    
+  }
+  for (let i = 0; i < evens.length; i ++) {
+    console.log(evens[i]);
+  }
+  for (let i = 0; i < odds.length; i ++) {
+    console.log(odds[i]);
   }
   //for (const evenNumbers of array){
   //  console.log(evenNumbers);
